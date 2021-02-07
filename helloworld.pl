@@ -21,20 +21,44 @@ print($a,"\n");
 my $a = 10;
 my $b = 20;
 
-print $a <=> $b, "\n";
+#print $a <=> $b, "\n";
 
 $b = 10;
-print $a <=> $b, "\n";
+#print $a <=> $b, "\n";
 
 $b = 5;
-print $a <=> $b, "\n";
+# print $a <=> $b, "\n";
 
 
 $a = "5";
 $b = "5";
 
-print($a == $b,"\n"); # 1
-$b = "5*";
-print($a == $b,"\n"); #
+#print($a);
+#print($b);
 
+print($a eq $b,"\n"); # 1
+$b = "5dfasdf";
+print("B = ", $b, "\n");
+$c = $a eq $b;
+$d = $c eq "";
+print($d);
+#learned that perl doesn't support boolean data types
+if ($c) {
+    print("Incorrect\n");
+}
+else {
+    print("These are not equal folks\n");
+}
 
+$a = 5;
+
+$c = $a << 1;
+print $c, "\n";
+
+print "badger" . "badger" . "badger" . "\n";
+print "badger " x 3, "\n";
+
+my $s;
+print chomp($s = <STDIN>), "\n";
+print $s,"\n";
+print $s, "\n";
