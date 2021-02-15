@@ -91,4 +91,8 @@ print("@weekdays","\n");
 my @stack = (1,2,3);
 push(@stack, "4h");
 
-print(@stack,"\n")
+print(@stack,"\n");
+
+pop(@stack);
+unshift(@stack,0);
+print(@stack,"\n");
