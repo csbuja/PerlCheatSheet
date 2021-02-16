@@ -96,3 +96,106 @@ print(@stack,"\n");
 pop(@stack);
 unshift(@stack,0);
 print(@stack,"\n");
+
+
+# Function definition
+sub Average {
+   # get total number of arguments passed.
+   $n = scalar(@_);
+   print($_[0],"\n");
+   $sum = 0;
+
+   foreach $item (@_) {
+      $sum += $item;
+   }
+   $average = $sum / $n;
+
+   print "Average for the given numbers : $average\n";
+   return $average;
+}
+
+# Function call
+print(Average(10, 20, 30),"\n");
+
+
+
+#hash table, or hash
+
+my %countries = qw(England English 
+                   France French 
+                   Spain Spanish 
+                   China Chinese 
+                   Germany German);
+
+my %countries =  ( 'England' => 'English',
+	           'France' => 'French', 
+    	       'Spain' => 'Spanish', 
+    	       'China' => 'Chinese', 
+	           'Germany' => 'German');
+
+my $language = $countries{'England'};
+print($language,"\n");
+$countries{"Netherlands"} = "Dutch";
+my $language = $countries{'Netherlands'};
+print($language,"\n");
+delete $countries{"Netherlands"};
+#my $language = $countries{'Netherlands'}; gets a runtime error
+#print($language,"\n");
+
+
+
+sub twoSum {
+    my %d = ();
+    $aref = $_[0];
+    $target = $_[1];
+    print("The target is: $target.","\n");
+    for(my $i = 0; $i < @$aref; $i++)
+    {
+        my $val = @$aref[$i];
+        $d{"$val"} = $i;
+    }
+
+    for(my $i = 0; $i < @$aref; $i++)
+    {
+        my $val = @$aref[$i];
+        if(exists($d{$target - $val}))
+        {
+            my $j = $d{$target - $val};
+            if($i != $j)
+            {
+                 my @ans = ($j,$i);
+                 #@ans = ($target - $val,$val);
+                 return @ans;
+            }
+        }
+    }
+
+    my @ans = ();
+    return @ans;
+
+}
+
+my @a = (1..9);
+#perl style
+for $i (@a){
+	print("$i","\n");
+}
+
+
+my @values = (1..6);
+for ( my $i = 0; $i < @values; $i++ ) {
+    print($i,"\n");
+    print($values[$i],"\n");
+    print("\n")
+}
+
+@ans = twoSum(\@values,7);
+print(@ans,"\n");
+
+
+$i = 1;
+$j = 2;
+if($i != $j)
+{
+    print("good","\n");
+}
