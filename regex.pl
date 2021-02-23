@@ -13,4 +13,6 @@ if ($test =~ /([wW]ol[Ff])/) {
 #substituting
 my $test = "there is a Wolf somewhere";
 $test =~ s/([wW]olf)/bear/;
-print $test;
+$test =~ s/somewhere/here/;
+print $test, "\n";
+
