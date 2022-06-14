@@ -5,6 +5,8 @@ my %h__ = (name => 'john', age => '39');
 print $h__{'name'} , "\n"; #remember to put $ in front of the variable name
 print $h__{name}, "\n";
 
+print $h__{game}=="","\n";
+
 #mapping to a reference
 my @arr = qw(hello world);
 $h__{arr} = \@arr;
